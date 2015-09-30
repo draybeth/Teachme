@@ -30,7 +30,14 @@ abstract class BaseSeeder extends Seeder
 
         $values= array_merge($values,$customValues);
 
-        $this->getModel()->create($values);
+        return $this->getModel()->create($values);
+    }
+
+    protected function createFrom($seeder , array $customValues =array())
+    {
+       $seeder = new $seeder;
+       return $seeder->create($customValues);
+
     }
 
 

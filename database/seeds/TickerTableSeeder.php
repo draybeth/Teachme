@@ -20,7 +20,7 @@ class TickerTableSeeder extends BaseSeeder
         return [
           'title'   =>  $faker->sentence(),
           'status'  =>  $faker->randomElement(['open','open','closed']),
-          'user_id' =>  rand(1,51)
+          'user_id' =>  $this->createFrom('UserTableSeeder')->id
 
         ];
     }

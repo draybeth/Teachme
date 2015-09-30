@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder {
 
 		$this->truncateTables(array(
 			'users',
-			'tickets'
+//			'tickets',
 		));
 
 		$this->call('UserTableSeeder');
