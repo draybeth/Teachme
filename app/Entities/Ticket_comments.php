@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class ticket_comments extends Model {
+class Ticket_comments extends Model {
 
 	//
 
