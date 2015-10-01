@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>....TeachMe by styde.net...</title>
+    <title>TeachMe by styde.net</title>
 
-    <link media="all" type="text/css" rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    {{--<link media="all" type="text/css" rel="stylesheet" href="{{asset('assets/css/style.css')}}">--}}
+    {!! Html::style('assets/css/style.css') !!}
 
 
-    <!-- Fonts -->
+
+            <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:300,700' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,6 +20,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
 <div id="notifications"></div>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -37,23 +40,7 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                    <ul class="nav navbar-nav">
-                        <li role="presentation"  class="active">
-                            <a href="http://teach.styde.net">Recientes</a>
-                        </li>
-                        <li role="presentation" >
-                            <a href="http://teach.styde.net/populares">Populares</a>
-                        </li>
-                        <li role="presentation" >
-                            <a href="http://teach.styde.net/pendientes">Abiertas</a>
-                        </li>
-                        <li role="presentation" >
-                            <a href="http://teach.styde.net/tutoriales">Finalizadas</a>
-                        </li>
-                        <li>
-                            <a href="https://styde.net/cursos/crea-tu-primera-aplicacion-con-laravel-5/">Ver curso</a>
-                        </li>
-                    </ul>
+                   {!! Html::menu() !!}
 
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="http://teach.styde.net/login">Login</a></li>
@@ -96,7 +83,9 @@
 <!-- Scripts -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="{{asset('assets/js/app.js')}}"></script>
-<script src="{{asset('assets/js/alert.js')}}"></script>
+{{--<script src="{{asset('assets/js/app.js')}}"></script>--}}
+{{--<script src="{{asset('assets/js/alert.js')}}"></script>--}}
+{!! Html::script('assets/js/app.js') !!}
+{!! Html::script('assets/js/alert.js') !!}
 </body>
 </html>

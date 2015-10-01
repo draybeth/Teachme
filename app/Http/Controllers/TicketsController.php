@@ -21,7 +21,7 @@ class TicketsController extends Controller{
 
     public function open()
     {
-        dd('open');
+        return view('tickets.details');
     }
 
     public function closed()
@@ -31,7 +31,7 @@ class TicketsController extends Controller{
 
     public function details($id)
     {
-        dd('details: '.$id);
+
     }
 
 
