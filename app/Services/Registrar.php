@@ -1,6 +1,6 @@
 <?php namespace TeachMe\Services;
 
-use TeachMe\User;
+use TeachMe\Entities\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 

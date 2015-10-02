@@ -7,23 +7,26 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <h2 class="title-show">
-                        sasas
-                <span class="label label-info absolute highlight">
-    Abierta
-</span>
+                        {{ $ticket->title }}
+                        @include('tickets.partials.status', compact('ticket'))
                     </h2>
 
 
                     <p class="date-t">
-                        <span class="glyphicon glyphicon-time"></span> 01/10/15 03:49pm
-                        - Santos avid
+                        <span class="glyphicon glyphicon-time"></span> {{ $ticket->created_at->format('d/m/y h:ia') }}
+
                     </p>
                     <h4 class="label label-info news">
-                        0 votos
+                        {{count($ticket->voters)}} votos
                     </h4>
 
                     <p class="vote-users">
+                       @foreach($ticket->voters as $user)
+                        <span class="label label-info">{{$user->name}}</span>
+                       @endforeach
                     </p>
+
+
                     <form method="POST" action="http://teach.styde.net/votar/89" accept-charset="UTF-8"><input name="_token" type="hidden" value="8ncfcUwNckasXmxVhXnHq4TYT69SlFlnWdeuHLuL">
                         <button type="submit" class="btn btn-primary">
                             <span class="glyphicon glyphicon-thumbs-up"></span> Votar
@@ -46,7 +49,19 @@
                         <button type="submit" class="btn btn-primary">Enviar comentario</button>
                     </form>
 
-                    <h3>Comentarios (0)</h3>
+                    <h3>Comentarios ({{count($ticket->comments)}})</h3>
+                    @foreach($ticket->comments as $comment)
+
+                    <div class="well well-sm">
+                        <p><strong>{{$comment->user->name}}</strong></p>
+                        <p>{{$comment->comment}}</p>
+                        <p class="date-t">
+                            <span class="glyphicon glyphicon-time"></span>
+                            {{$comment->created_at->format('d-m-Y h:ia')}}
+                        </p>
+                    </div>
+
+                    @endforeach
 
                 </div>
             </div>

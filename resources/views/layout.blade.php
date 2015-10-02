@@ -23,6 +23,7 @@
 
 <body>
 <div id="notifications"></div>
+
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="row">
@@ -35,17 +36,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="https://styde.net" target="_blank">Styde.net</a>
+                    <a class="navbar-brand" href="/" target="_blank">Styde.net</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                   {!! Html::menu() !!}
+                   {!! Html::menu('teachme.menu') !!}
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="http://teach.styde.net/login">Login</a></li>
-                        <li><a href="http://teach.styde.net/registro">Registro</a></li>
-                    </ul>
+                   @include('layout.login')
+
                 </div>
             </div>
         </div>

@@ -1,9 +1,16 @@
 <?php namespace TeachMe\Entities;
 
-use Illuminate\Database\Eloquent\Model;
 
-class Ticket_comments extends Model {
+class Ticket_comments extends Entity {
 
-	//
+	public function user()
+    {
+        return $this->belongsTo(User::getClass());
+    }
+
+    public function ticket()
+    {
+        return $this->belongsTo(Ticket::getClass());
+    }
 
 }

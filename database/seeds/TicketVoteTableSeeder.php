@@ -12,7 +12,7 @@ use TeachMe\Entities\TicketVote;
 
 class TicketVoteTableSeeder extends  BaseSeeder
 {
-    protected $total = 250;
+//    protected $total = 250;
 
     public function getModel()
     {
