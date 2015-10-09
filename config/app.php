@@ -146,6 +146,7 @@ return [
 		'TeachMe\Providers\EventServiceProvider',
 		'TeachMe\Providers\RouteServiceProvider',
 		'TeachMe\Providers\HtmlServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
 
 
@@ -197,8 +198,9 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 
-		'Form' => 'Collective\Html\FormFacade',
-		'Html' => 'Collective\Html\HtmlFacade',
+		'Form' 		=> 'Collective\Html\FormFacade',
+		'Html'		=> 'Collective\Html\HtmlFacade',
+		'Debugbar'  => 'Barryvdh\Debugbar\Facade',
 
 	],
 

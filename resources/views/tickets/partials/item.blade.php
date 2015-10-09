@@ -8,12 +8,12 @@
         </h4>
         <p>
             <a href="{{ route('tickets.details',$ticket->id)}}">
-                <span class="votes-count">{{ $ticket->voters()->count() }} votos</span>
-                - <span class="comments-count">{{ $ticket->comments()->count() }} comentarios</span>.
+                <span class="votes-count">{{ $ticket->num_votes }} votos</span>
+                - <span class="comments-count">{{ $ticket->num_comments}} comentarios</span>.
             </a>
         </p>
         <p class="date-t">
-            <span class="glyphicon glyphicon-time"></span> {{ $ticket->created_at->format('d/m/y h:ia') }}
-            Por Mario Nava
+            <span class="glyphicon glyphicon-time"></span> {{ $ticket->created_at->format('d/m/y h:ia') }} <br>
+            Por - {{$ticket->author->name}}
         </p>
     </div>

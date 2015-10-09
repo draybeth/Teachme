@@ -15,7 +15,7 @@ class CreateTicketsTable extends Migration {
 		Schema::create('tickets', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('title',20);
+			$table->string('title',100);
 			$table->enum('status',['open','closed']);
 
 			$table->integer('user_id')->unsigned();

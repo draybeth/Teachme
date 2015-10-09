@@ -3,6 +3,9 @@
 
 class Ticket_comments extends Entity {
 
+
+    protected $fillable = ['comment','link'];
+
 	public function user()
     {
         return $this->belongsTo(User::getClass());
